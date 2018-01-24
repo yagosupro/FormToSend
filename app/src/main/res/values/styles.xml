@@ -1,0 +1,37 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppMyTestTheme" parent="Theme.AppCompat.NoActionBar">
+        <!--
+        #800000
+        -->
+        <!-- BAR-->
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <!--huy znaet 4o eto-->
+        <item name="colorPrimaryDark">#800000</item>
+        <!--vydelenie -->
+        <item name="colorAccent">#607D8B</item>
+        <item name="windowActionBar">false</item>
+
+
+        <item name="android:windowBackground">@color/colorWhite</item>
+
+        <!-- TextView/buttonText-->
+        <item name= "android:textColor">@color/colorFont</item>
+
+        <!-- editText/bar-->
+        <item name="android:textColorPrimary">@color/colorWhite</item>
+        <item name="android:textColorHint">#BDBDBD</item>
+        <item name="android:editTextColor">@color/colorFont</item>
+
+        <!-- hintColor not active-->
+        <item name="colorControlNormal">#BDBDBD</item>
+
+        <!-- when View active-->
+        <item name="colorControlActivated">#607D8B</item>
+
+
+    </style>
+
+
+</resources>

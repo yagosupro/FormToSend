@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:textAlignment="center">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_awesome_toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:textColor="@color/colorWhite"/>
+
+
+    <ImageView
+        android:id="@+id/imagePhoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/my_awesome_toolbar"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        android:cropToPadding="false"
+        android:scaleType="centerInside"
+        android:layout_centerInParent="true"
+
+        />
+
+    <ImageView
+        android:id="@+id/imageMail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_email_black_18dp"
+        android:layout_below="@+id/imagePhoto"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingTop="8dp"
+        android:paddingLeft="16dp"/>
+
+    <TextView
+        android:id="@+id/textMail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="textMail"
+        android:layout_below="@+id/imagePhoto"
+        android:layout_toRightOf="@+id/imageMail"
+        android:layout_toEndOf="@+id/imageMail"
+        android:layout_marginLeft="16dp"
+        android:paddingTop="8dp"/>
+
+    <ImageView
+        android:id="@+id/imagePhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_phone_black_18dp"
+        android:layout_below="@+id/imageMail"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp"/>
+
+    <TextView
+        android:id="@+id/textPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="textPhone"
+        android:layout_below="@+id/imageMail"
+        android:layout_toRightOf="@+id/imagePhone"
+        android:layout_toEndOf="@+id/imagePhone"
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp"/>
+
+    <ImageView
+        android:id="@+id/imagePass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_build_black_18dp"
+        android:layout_below="@+id/imagePhone"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp"/>
+
+    <TextView
+        android:id="@+id/textPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="textPass"
+        android:layout_below="@+id/imagePhone"
+        android:layout_toRightOf="@+id/imagePass"
+        android:layout_toEndOf="@+id/imagePass"
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorPrimaryDark"
+        android:text="Button"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"/>
+
+</RelativeLayout>

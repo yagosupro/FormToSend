@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimaryDark">#0288D1</color>
+    <color name="colorAccent">#B3E5FC</color>
+
+    <color name="colorTopWindow">#0288D1</color>
+    <color name="colorPrimary">#03A9F4</color>
+    <color name="colorButtonPadding">#B3E5FC</color>
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorFont">#607D8B</color>
+    <color name ="colorPhotoButton">#607D8B</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorRED">#800000</color>
+
+</resources>
