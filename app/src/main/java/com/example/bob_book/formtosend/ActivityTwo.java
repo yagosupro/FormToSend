@@ -23,29 +23,27 @@ import java.io.InputStream;
 
 public class ActivityTwo extends AppCompatActivity implements View.OnClickListener {
 
-    Uri photoUri=Uri.EMPTY;
+    Uri photoUri = Uri.EMPTY;
     ImageView imagePhoto;
     TextView textMail;
     TextView textPhone;
     TextView textPass;
-    Bitmap  photo;
+    Bitmap photo;
 
     Button sendEmail;
-
-
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_two);
-        Intent intent=getIntent();
+        Intent intent = getIntent();
 
-        imagePhoto= (ImageView) findViewById(R.id.imagePhoto);
-        textMail= (TextView) findViewById(R.id.textMail);
-        textPhone= (TextView) findViewById(R.id.textPhone);
-        textPass= (TextView) findViewById(R.id.textPass);
-        sendEmail= (Button) findViewById(R.id.sendEmail);
+        imagePhoto = (ImageView) findViewById(R.id.imagePhoto);
+        textMail = (TextView) findViewById(R.id.textMail);
+        textPhone = (TextView) findViewById(R.id.textPhone);
+        textPass = (TextView) findViewById(R.id.textPass);
+        sendEmail = (Button) findViewById(R.id.sendEmail);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.my_awesome_toolbar);
         setSupportActionBar(toolbar);
@@ -57,42 +55,29 @@ public class ActivityTwo extends AppCompatActivity implements View.OnClickListen
             }
         });
 
-
-
-
-
-
-
-        photoUri=intent.getParcelableExtra("photoUri");
-        photo=intent.getParcelableExtra("photo");
+        photoUri = intent.getParcelableExtra("photoUri");
+        photo = intent.getParcelableExtra("photo");
         textMail.setText(intent.getStringExtra("email"));
         textPass.setText(intent.getStringExtra("password"));
         textPhone.setText(intent.getStringExtra("phone"));
 
-
         sendEmail.setOnClickListener(this);
-
-
-
 
         imagePhoto.setImageBitmap(photo);
 
     }
 
-
-
-
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.sendEmail:
                 Toast.makeText(getApplicationContext(), "SENDBYEMAIL", Toast.LENGTH_LONG).show();
                 Intent emailIntent = new Intent(Intent.ACTION_SEND);
 // The intent does not have a URI, so declare the "text/plain" MIME type
                 emailIntent.setType("image/jpeg");
-                emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[] {"jon@example.com"}); // recipients
+                emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"jon@example.com"}); // recipients
                 emailIntent.putExtra(Intent.EXTRA_SUBJECT, "@projectName: данные анкеты");
-                emailIntent.putExtra(Intent.EXTRA_TEXT, "Email:"+textMail.getText()+"\n\r Phone: "+textPhone.getText()+"\n\r");
+                emailIntent.putExtra(Intent.EXTRA_TEXT, "Email:" + textMail.getText() + "\n\r Phone: " + textPhone.getText() + "\n\r");
                 emailIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse(String.valueOf(photoUri)));
                 break;
         }

@@ -16,44 +16,28 @@ public class Validation {
     String email;
     String phone;
     String changePhone;
-
-
     String password;
-
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-
     String passwordPatternLetters = "[a-zA-Z]+";
     String passwordPatternNumbers = "[0-9]+";
-
-    String phonePattern = "[0-9]+";
-
     int status = 0;
 
     public void photoValid(Uri photo) {
         if (Uri.EMPTY.equals(photo)) {
-            //doTheThing()
-
-            //status=1;
+            status=1;
         }
     }
 
     public void emailValid(String email) {
-
         email.trim();
-
         if (email.matches(emailPattern) && email.length() > 0) {
             return;
-
         } else {
             status = 2;
-
         }
     }
 
     public void phoneValid(String phone) {
-
-
-
         if (phone.length() > 9) {
             changePhoneNumber(phone);
             return;
@@ -64,20 +48,13 @@ public class Validation {
     public void passwordValid(String password) {
         if (password.length() < 6) {
             status = 4;
-
         }
-
         if (password.matches(passwordPatternLetters)) {
             status = 4;
-
         }
-
         if (password.matches(passwordPatternNumbers)) {
             status = 4;
-
         }
-
-
     }
 
     public void changePhoneNumber(String p){
@@ -90,19 +67,13 @@ public class Validation {
             p=p.replaceFirst("8","+7");
             changePhone = p.substring(0, 2) + "(" + p.substring(2, 5) + ")" + p.substring(5, 8) + " " + p.substring(8, 10) + " " + p.substring(10);
         }
-
         if(p.length()==10){
             p="+7"+p;
             changePhone = p.substring(0, 2) + "(" + p.substring(2, 5) + ")" + p.substring(5, 8) + " " + p.substring(8, 10) + " " + p.substring(10);
         }
-        //+7(495)999 09 09
-
     }
 
-
     public Validation(Uri photo, String email, String phone, String password) {
-        System.out.println("запускаем валидацию");
-
         status = 0;
         photoValid(photo);
         emailValid(email);

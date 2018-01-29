@@ -131,19 +131,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                     break;
                 case 1:
-                    Toast.makeText(getApplicationContext(), "netPhoto", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "no photo", Toast.LENGTH_LONG).show();
                     break;
                 case 2:
-                    Toast.makeText(getApplicationContext(), "netEmail", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "no mail", Toast.LENGTH_LONG).show();
                     editMail.requestFocus();
 //
                     break;
                 case 3:
-                    Toast.makeText(getApplicationContext(), "netPhone", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "no mail", Toast.LENGTH_LONG).show();
                     editPhone.requestFocus();
                     break;
                 case 4:
-                    Toast.makeText(getApplicationContext(), "netPassword", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "no password", Toast.LENGTH_LONG).show();
                     editPassword.requestFocus();
                     break;
             }
